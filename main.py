@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from schemas import disciplinaPublic, disciplinaSchema, conversor
+from utils import disciplinaPublic, disciplinaSchema, conversor
 from http import HTTPStatus
 app= FastAPI()
 
