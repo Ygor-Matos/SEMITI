@@ -33,7 +33,7 @@ async def deleteDisciplina(id: int):
     except:
         raise HTTPException(status_code=HTTPStatus.NOT_FOUND, detail="disciplina não encontrada")
 
-@app.put("/disciplinas/", response_model=disciplinaPublic)
+@app.put("/disciplinas", response_model=disciplinaPublic)
 async def editDisciplina(disciplina: disciplinaSchema):
     if(disciplina.id in app.state.disciplinas):
         app.state.disciplinas[disciplina.id]=disciplina
